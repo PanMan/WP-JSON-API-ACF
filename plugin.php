@@ -15,6 +15,4 @@ function wp_api_encode_acf($data,$post,$context){
     return $data;
 }
 
-if( function_exists('get_fields') ){
-    add_filter('json_prepare_post', 'wp_api_encode_acf', 10, 3);
-}
+add_filter('json_prepare_post', 'wp_api_encode_acf', 10, 3);
