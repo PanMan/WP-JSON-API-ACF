@@ -27,5 +27,6 @@ function wp_api_encode_acf_user($data,$post){
 }
 
 add_filter('json_prepare_post', 'wp_api_encode_acf', 10, 3);
+add_filter('json_prepare_page', 'wp_api_encode_acf', 10, 3);
 add_filter('json_prepare_term', 'wp_api_encode_acf_taxonomy', 10, 2);
 add_filter('json_prepare_user', 'wp_api_encode_acf_user', 10, 2);
